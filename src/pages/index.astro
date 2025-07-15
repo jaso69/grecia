@@ -1,0 +1,39 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import SplitPanel from '@components/sections/SplitPanel.astro';
+import Features from '@components/sections/Features.astro';
+import Stats from '@components/sections/Stats.astro';
+import { featureLists } from '@data/features';
+import { statsLists } from '@data/stats';
+import Faqs from '@components/sections/Faqs.astro';
+import { faqLists } from '@data/faqs';
+import heroImage from '../assets/images/home/hero.webp';
+import styleGuideImage from '../assets/images/home/dev.webp';
+
+const seoTitle = "Administradores de fincas JMF Ortiz";
+const seoDescription = "Administradores de Fincas en Torrejón de Ardoz con más de 40 años de experiencia. Presupuesto gratuito y sin compromiso."
+
+const heroContent = {
+    title: 'La pagina de Grecia',
+    description: '',
+    backgroundImage: heroImage,
+    overlayOpacity: 0.2
+}
+
+const FooterCta = {
+    eyebrow: "",
+    title: ' Contacto con la administración de fincas',
+    description: 'Ponemos a tu disposición un teléfono con centralita para que ninguna llamada se pierda, un formulario de contacto para atender tus consultas y un asistente virtual disponible las 24 horas.',
+    hideCta: false,
+    button: {
+        text: 'Habla con nosotros',
+        link: '/contact',
+        target: '_self'
+    }
+}
+---
+
+<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
+    <Hero content={heroContent} />
+</Layout>
